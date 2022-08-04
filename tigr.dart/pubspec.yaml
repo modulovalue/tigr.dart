@@ -1,0 +1,21 @@
+name: tigr
+description: A starting point for Dart libraries or applications.
+
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+
+dev_dependencies:
+  extra_pedantic: ^3.0.0
+  ffi: ^2.0.0
+  ffigen: ^6.0.1
+
+# TODO add // ignore_for_file: type=lint to the top to ignore warnings
+# NOTE: Execute 'dart run ffigen' to regenerate.
+# Package: https://pub.dev/packages/ffigen
+ffigen:
+  name: TigrBindings
+  description: "Description"
+  output: 'lib/tigr.g/generated_bindings.dart'
+  headers:
+    entry-points:
+      - 'tigr/tigr.h'
